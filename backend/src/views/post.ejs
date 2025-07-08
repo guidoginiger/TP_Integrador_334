@@ -1,0 +1,32 @@
+<%- include("partials/head.ejs") %>
+<%- include("partials/nav.ejs") %>
+
+
+<main class="bienvenida">
+  <div>
+    <h2>Alta producto</h2>
+    <form id="altaProducts_form" autocomplete="off" action="/dashboard/post" method="POST">
+      <label for="nombreUser">Nombre</label>
+      <input type="text" id="nombreUser" name="nombre" placeholder="Nombre del producto" required>
+
+      <label for="categoryProd">Categoria</label>
+      <select id="categoryProd" name="categoria" required>
+        <option value="" disabled selected>Seleccione una categoría</option>
+        <option value="Procesadores">Procesadores</option>
+        <option value="Placas de video">Placas de video</option>
+      </select>
+
+      <label for="imagenProd">Imagen</label>
+      <input type="text" id="imagenProd" name="imagen" required>
+
+      <label for="precioProd">Precio</label>
+      <input type="number" step="0.01" id="precioProd" name="precio" placeholder="Precio del producto" required>
+
+      <input type="submit" value="Crear Producto">
+    </form>
+  </div>
+</main>
+
+<script src="/js/post.js"></script>
+
+<%- include("partials/footer.ejs") %>
