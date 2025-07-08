@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UTN Hardware Store</title>
+    <link rel="stylesheet" href="css/tienda.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <header>
+        <a href="bienvenida.html" style="text-decoration: none; color: inherit;">
+            <div class="logo-nombre">
+                <img src="assets/favicon.ico" alt="Logo UTN Hardware Store" />
+                <h2>UTN Hardware Store</h2>
+            </div>
+        </a>
+        <div class="saludo-usuario">
+            Hola, <span id="nombreUsuario"></span> 👋
+        </div>
+        <div class="carrito">
+            <button id="btnVerCarrito">Ver Carrito (<span id="contador-carrito">0</span>)</button>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="categoria-selector">
+            <button id="btnProcesadores">Procesadores</button>
+            <button id="btnPlacas">Placas de video</button>
+        </div>
+
+        <section class="categoria" id="seccion-procesadores">
+            <h2>Procesadores</h2>
+            <div class="botones-orden">
+                <button id="ordenar-nombre-procesadores">Ordenar por nombre</button>
+                <button id="ordenar-precio-procesadores">Ordenar por precio</button>
+            </div>
+            <div class="productos" id="productos-procesadores"></div>
+        </section>
+
+        <section class="categoria" id="seccion-placas">
+            <h2>Placas de video</h2>
+            <div class="botones-orden">
+                <button id="ordenar-nombre-placas">Ordenar por nombre</button>
+                <button id="ordenar-precio-placas">Ordenar por precio</button>
+            </div>
+            <div class="productos" id="productos-placas"></div>
+        </section>
+    </main>
+    <footer>
+        <p>Alumnos: Agustín López y Guido Giniger</p>
+    </footer>
+
+    <script src="js/tienda.js" defer></script>
+</body>
+
+</html>

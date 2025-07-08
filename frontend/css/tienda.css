@@ -1,0 +1,172 @@
+
+body {
+  background-color: #1e1e2f;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #2c2c40;
+  color: #fff;
+  border-bottom: 2px solid #7f5af0;
+  gap: 1rem;
+}
+
+.logo-nombre {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-nombre img {
+  width: 64px;
+  height: 64px;
+}
+
+.logo-nombre h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.saludo-usuario {
+  grid-column: 2;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.carrito {
+  text-align: right;
+  min-width: 150px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #7f5af0;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+button:hover {
+  background-color: #9c7bff;
+}
+
+.carrito button {
+  padding: 8px 12px;
+  margin-top: 0;
+}
+
+/* Los section de las cards */
+main {
+  padding: 20px;
+}
+
+.categoria-selector {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.categoria {
+  display: none;
+  margin-bottom: 2rem;
+}
+
+.categoria.activa {
+  display: block;
+}
+
+.botones-orden {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+section {
+  margin-top: 0;
+}
+
+section h2 {
+  color: #b388ff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Todos los productos */
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.producto {
+  background-color: #2c2c40;
+  border: 1px solid #7f5af0;
+  padding: 1rem;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #7f5af0;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Scrollbar especial */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e2f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7f5af0;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .productos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .saludo-usuario {
+    margin-top: 0;
+    grid-column: auto;
+  }
+
+  .carrito {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
