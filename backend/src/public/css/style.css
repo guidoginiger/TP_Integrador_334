@@ -1,0 +1,219 @@
+/* Estilo general para el body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a0d2f; /* violeta oscuro */
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Contenedor principal para get, post, put, delete */
+main {
+  background-color: #1a0a3d; /* Fondo violeta para todo */
+  padding: 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #6a42f4;
+}
+
+/* titulos */
+h1, h2 {
+  color: #9b6aff;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 1px 1px 4px #3b2a7c;
+}
+
+/* Form */
+form {
+  background-color: #2e1b56;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(138, 109, 251, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1rem;
+}
+
+label {
+  font-weight: 600;
+  color: #cbbfff;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 10px;
+  border: 1px solid #8a6dfb;
+  border-radius: 6px;
+  background-color: #3a2775;
+  color: #eee;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #d0bfff;
+  outline: none;
+}
+
+/* Botones */
+button, input[type="submit"] {
+  background: linear-gradient(90deg, #7a5bfb, #ab7fff);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  align-self: flex-start;
+  min-width: 150px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: linear-gradient(90deg, #ab7fff, #7a5bfb);
+}
+
+
+#btnEliminar {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#btnEliminar:disabled {
+  cursor: not-allowed;
+}
+
+#btnEliminar:hover:not(:disabled) {
+  background-color: #ff0000;
+}
+
+/* Containers */
+#productos-container,
+#getIdContainer,
+#productoInfo,
+#resultadoDelete {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #2e1a6d;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #6a42f4;
+  color: #d4cfff;
+  min-height: 80px;
+}
+
+/* Cards*/
+.producto {
+  background-color: #3b2a7c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #6a42f4;
+  padding: 15px;
+  width: 220px;
+  color: #eee;
+  text-align: center;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #9b6aff;
+}
+
+.producto img {
+  max-width: 120px;
+  height: 100px;
+  object-fit: contain;
+  margin: 0 auto 10px auto;
+  border-radius: 5px;
+  background: #3b2a7c;
+  padding: 5px;
+}
+
+/* Nav */
+nav {
+  background-color: #2e1b56;
+  padding: 15px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #6a42f4;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.nav-barra {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.nav-barra li a {
+  color: #d4cfff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-barra li a:hover,
+.nav-barra li a.active {
+  background-color: #6a42f4;
+  color: white;
+}
+
+
+footer {
+  background-color: #2e1b56;
+  text-align: center;
+  padding: 15px 0;
+  color: #d4cfff;
+  font-size: 0.95rem;
+  border-top: 1px solid #5a42a6;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  main {
+    margin: 15px 10px;
+    padding: 15px;
+    max-width: 95vw;
+  }
+
+  .nav-barra {
+    gap: 20px;
+  }
+
+  button, input[type="submit"] {
+    width: 100%;
+    text-align: center;
+  }
+
+  .producto {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px auto;
+    display: block;
+  }
+}
