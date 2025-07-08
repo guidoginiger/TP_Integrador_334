@@ -27,8 +27,9 @@ Encargado de la base de datos, proveer una API, incorporar plantillas con vistas
 * _Rutas y endpoints_ estructurados siguiendo el patrón MVC.
 
 ## Autores
-[Agustin Lopez Teson](https://github.com/AgustinLopezTeson)
-[Guido Giniger](https://github.com/guidoginiger)
+* [Agustin Lopez Teson](https://github.com/AgustinLopezTeson)
+* [Guido Giniger](https://github.com/guidoginiger)
 
-## Agradecimientos
-***Agradecemos a los profesores Xabi y Gabi por las clases y las guías durante toda la cursada.***
+***Agradecemos a los profesores Xabi y Gabi por las clases y las guías durante toda la cursada***
+
+![Logo de GitHub](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
